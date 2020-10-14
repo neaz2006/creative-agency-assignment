@@ -1,0 +1,6 @@
+.main_head{
+    width: 100%;
+    background: #FBD062;
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 74%, 0 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 74%, 0 100%, 0% 100%);
+}

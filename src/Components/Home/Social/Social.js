@@ -1,30 +1,33 @@
-import React from 'react';
-import { Col, Container, Nav, Row } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Col, Container, Nav, Row, Navbar } from 'react-bootstrap';
 import './Social.css'
-import slack from '../../../images/logos/slack.png'
-import google from '../../../images/logos/google.png'
-import ubar from '../../../images/logos/uber.png'
-import netflix from '../../../images/logos/netflix.png'
-import airbnb from '../../../images/logos/airbnb.png'
 
 const Social = () => {
-    return (
-        <div>
-            <Nav className="justify-content-center" activeKey="/home">
-                <Nav.Item className="row">
-                    <Container fluid>
-                        <Row>
-                            <Col><Nav.Link className="socal-icon" href="/home"><img src={slack} alt="" /></Nav.Link></Col>
-                            <Col><Nav.Link className="socal-icon" href="/home"><img src={google} alt="" /></Nav.Link></Col>
-                            <Col><Nav.Link className="socal-icon" href="/home"><img src={ubar} alt="" /></Nav.Link></Col>
-                            <Col><Nav.Link className="socal-icon" href="/home"><img src={netflix} alt="" /></Nav.Link></Col>
-                            <Col><Nav.Link className="socal-icon" href="/home"><img src={airbnb} alt="" /></Nav.Link></Col>    
-                        </Row>
-                    </Container>
+    const socialImgs = [
+        { image: "https://i.ibb.co/wC1qBrb/slack.png", },
+        { image: "https://i.ibb.co/1v28vYY/google.png" },
+        { image: "https://i.ibb.co/zWcqmMs/uber.png" },
+        { image: "https://i.ibb.co/jgXjfPP/netflix.png" },
+        { image: "https://i.ibb.co/zWcqmMs/uber.png" }
+    ]
+    console.log(socialImgs);
 
-                </Nav.Item>
-            </Nav>
-        </div>
+    const [socialIcon, setSociaalIcon] = useState(socialImgs[0]);
+    return (
+        <Container>
+            <Row className="justify-content-between">
+                {
+                    socialImgs.map(socialImg =>
+                        <div className="">
+                            <img src={socialImg.image} alt="" className="socal-icon " />
+                        </div>
+                    )
+
+                }
+
+            </Row>
+        </Container>
+
     );
 };
 

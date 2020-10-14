@@ -1,0 +1,7 @@
+.car_img{    
+    width: 26%;
+    margin: auto;
+}
+.full_card:hover{
+    background-color: #7AB259;
+}
