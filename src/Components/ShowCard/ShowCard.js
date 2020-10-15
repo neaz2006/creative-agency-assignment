@@ -1,14 +1,19 @@
 import React from 'react';
 import { Card, Container } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 import './ShowCard.css'
 
 const ShowCard = () => {
+    const history = useHistory();
+    const handleOrder = (id) => {
+        history.push('/Order');
+    }
     return (
         <>
             <Container>
                 <h1 className="mt-5 pt-5">Provide awesome <span className="clr_styl">services</span></h1>
                 <div className="row mt-5 ">
-                    <div className="col-md-4 justify-content-center">
+                    <div onClick={() => handleOrder()} className="col-md-4 justify-content-center">
                         <Card style={{ width: '18rem' }} className="full_card">
                             <Card.Img style={{ width: "26%", margin: "auto" }} className="mt-4" variant="top" src="https://i.ibb.co/34LJxt2/service1.png/171x180" roundedCircle />
                             <Card.Body>
@@ -19,7 +24,7 @@ const ShowCard = () => {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div className="col-md-4">
+                    <div onClick={() => handleOrder()} className="col-md-4">
                         <Card style={{ width: '18rem' }} className="full_card">
                             <Card.Img style={{ width: "26%", margin: "auto" }} className="mt-4" variant="top" src="https://i.ibb.co/47Ghn4t/service2.png/171x180" roundedCircle />
                             <Card.Body>
@@ -30,7 +35,7 @@ const ShowCard = () => {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div className="col-md-4">
+                    <div onClick={() => handleOrder()} className="col-md-4">
                         <Card style={{ width: '18rem' }} className="full_card">
                             <Card.Img style={{ width: "26%", margin: "auto" }} className="mt-4" variant="top" src="https://i.ibb.co/NjD9RGF/service3.png/171x180" roundedCircle />
                             <Card.Body>

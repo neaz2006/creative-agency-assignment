@@ -3,7 +3,7 @@ import { Card, Container } from 'react-bootstrap';
 
 const ClientCard = () => {
     return (
-        <>
+        <section className="justify-content-center">
             <Container>
                 <h1 className="m-5 p-5">Clients <span className="clr_styl">Feedback</span></h1>
                 <div className="row">
@@ -52,7 +52,7 @@ const ClientCard = () => {
                 </div>
             </Container>
 
-        </>
+        </section>
 
 
     );

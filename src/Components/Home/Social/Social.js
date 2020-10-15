@@ -1,34 +1,31 @@
 import React, { useState } from 'react';
 import { Col, Container, Nav, Row, Navbar } from 'react-bootstrap';
-import './Social.css'
+import './Social.css';
 
-const Social = () => {
-    const socialImgs = [
-        { image: "https://i.ibb.co/wC1qBrb/slack.png", },
-        { image: "https://i.ibb.co/1v28vYY/google.png" },
-        { image: "https://i.ibb.co/zWcqmMs/uber.png" },
-        { image: "https://i.ibb.co/jgXjfPP/netflix.png" },
-        { image: "https://i.ibb.co/zWcqmMs/uber.png" }
-    ]
-    console.log(socialImgs);
+const socialImgs = [
+    { image: "https://i.ibb.co/9Ydj55N/slack.png", },
+    { image: "https://i.ibb.co/T4jZ6dv/google.png" },
+    { image: "https://i.ibb.co/7Q4G5tv/uber.png" },
+    { image: "https://i.ibb.co/0FZrbVL/netflix.png" },
+    { image: "https://i.ibb.co/rppJsnZ/airbnb.png" }
+]
 
-    const [socialIcon, setSociaalIcon] = useState(socialImgs[0]);
+const Social = () => {    
     return (
-        <Container>
-            <Row className="justify-content-between">
-                {
-                    socialImgs.map(socialImg =>
-                        <div className="">
-                            <img src={socialImg.image} alt="" className="socal-icon " />
-                        </div>
-                    )
-
-                }
-
-            </Row>
-        </Container>
-
-    );
+        <section>
+            <Container>
+                <Row className="justify-content-between">
+                    {
+                        socialImgs.map(socialImg =>
+                            <div className="">
+                                <img src={socialImg.image} alt="" className="socal-icon" />
+                            </div>
+                        )
+                    }
+                </Row>
+            </Container>
+        </section>
+    )
 };
 
 export default Social;

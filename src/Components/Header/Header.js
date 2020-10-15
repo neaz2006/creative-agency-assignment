@@ -7,10 +7,10 @@ import HeaderIntro from './HeaderIntro/HeaderIntro';
 
 const Header = () => {
     return (
-        <div className="top">
+        <main className="top">
             <NavigationBar></NavigationBar>
             <HeaderIntro></HeaderIntro>
-        </div>
+        </main>
     );
 };
 

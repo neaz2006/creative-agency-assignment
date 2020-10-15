@@ -10,14 +10,14 @@ import ContactUs from '../ContactUs/ContactUs';
 
 const Home = () => {
     return (
-        <div>       
+        <main>       
             <Header></Header>
             <Social></Social>
             <ShowCard></ShowCard>
             <CarouselSlide></CarouselSlide>
             <ClientCard></ClientCard>
             <ContactUs></ContactUs>
-        </div>
+        </main>
     );
 };
 
