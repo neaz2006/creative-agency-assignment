@@ -10,6 +10,7 @@ import LoginFrom from "./Components/LoginFrom/LoginFrom";
 import NoMatch from "./Components/NoMatch/NoMatch";
 import Order from "./Components/Order/Order";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import LogOut from "./Components/LoginFrom/LogOut/LogOut";
 
 export const UserContext = createContext();
 
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/LoginFrom">
               <LoginFrom></LoginFrom>
+            </Route>
+          <Route path="/Logout">
+              <LogOut></LogOut>
             </Route>
             <PrivateRoute path="/order">
               <Order></Order>

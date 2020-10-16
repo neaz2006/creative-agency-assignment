@@ -8,11 +8,11 @@ import './OrderList.css'
 const OrderList = () => {
     return (
         <Container className="ordr_body">
-            <Link className="d-flex f_icon_clr"><FontAwesomeIcon icon={faShoppingCart} />Order</Link>
-            <Link className="d-flex f_icon_clr"><FontAwesomeIcon icon={faCar}/>Service List</Link>
-            <Link className="d-flex f_icon_clr"><FontAwesomeIcon icon={faComment}/> Review</Link>            
+            <h5 className=" f_icon_clr btn"><FontAwesomeIcon icon={faShoppingCart} />  Order</h5>
+            <h5 className=" f_icon_clr btn"><FontAwesomeIcon icon={faCar}/> Service List</h5>
+            <h5 className=" f_icon_clr btn"><FontAwesomeIcon icon={faComment}/> Review</h5>            
         </Container>
-    );
+    ); 
 };
 
 export default OrderList;
